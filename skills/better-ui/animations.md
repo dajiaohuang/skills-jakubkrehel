@@ -69,7 +69,7 @@ function PressableButton({ disabled, children }) {
 Where the button has no variant API to carry the opt-out, apply the scale class conditionally on a `static` prop:
 
 ```tsx
-const tapScale = "motion-safe:enabled:active:scale-[0.96]";
+const tapScale = "motion-safe:active:not-disabled:scale-[0.96]"; // Tailwind v4; on v3 use motion-safe:enabled:active:scale-[0.96]
 
 function Button({ static: isStatic, className, children, ...props }) {
   return (
